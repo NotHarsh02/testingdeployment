@@ -29,7 +29,7 @@ router.get("/getdata",async (req,res)=>{
       const temp=await User.findById(userId).select("favourites")
       res.send(temp)
     } catch (error) {
-      
+      console.log(error.message)
     }
   })
 

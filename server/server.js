@@ -11,6 +11,7 @@ const watchlater = require("./routes/watchlater");
 const diary = require("./routes/diary");
 const favourites = require("./routes/favourites")
 const likes=require("./routes/likes")
+const members=require("./routes/members")
 // const Watchlater = require('./models/watchlater');
 const cors = require("cors");
 app.use(flash())
@@ -72,6 +73,7 @@ app.use("/watchlater",watchlater)
 app.use("/diary",diary)
 app.use("/favourites",favourites)
 app.use("/likes",likes)
+app.use("/members",members)
 
 app.get('/checkLogin',(req,res)=>{
   res.json({ loggedIn: req.isAuthenticated() });
